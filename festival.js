@@ -1,6 +1,7 @@
 'use strict'
 
 //console.log("Dje si, kako si")
+function () {
 
 function Genre(name){
     this.name = name;
@@ -23,10 +24,19 @@ function Program (date){
     this.date = date;
     this.listOfMovies = [];
     this.totalNofMovies = 0;
+    this.length = Movie.length;
 
     this.addMovie = function (movie){
         this.listOfMovies.push(movie);
         this.totalNofMovies = this.listOfMovies.length;
+    }
+    this.getData = function () {
+        var totalLength = 0;
+        for (var i=0; i<listOfMovies.length; i++) {
+            totalLength += this.length;
+        }
+        return this.date + ", length:" + totalLength;
+        return 
     }
 }
 
@@ -40,3 +50,4 @@ function Festival (name){
         this.numberOfMovies += program.totalNofMovies;
     }
 }
+} ()
